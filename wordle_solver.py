@@ -13,13 +13,7 @@ def get_word_length():
             return length
 
 def filter_by_length(words, length):
-    filtered = list()
-
-    for word in words:
-        if len(word) == length:
-            filtered.append(word)
-
-    return filtered
+    return [word for word in words if len(word) == length]
 
 def filter_by_response(words, guess, response):
     for idx,chr in enumerate(guess):
